@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { use, useState } from 'react'
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import { useEffect } from 'react';
 const Edit = () => {
+    const nav = useNavigate();
     const {id} = useParams();
     const [data, setData] = useState({
         name: '',
@@ -36,6 +37,7 @@ const updateHandler = async(e)=>{
         try{
             const result = await axios.patch(`http://localhost:3000/employees/${id}`,data)
             console.log(result);
+            nav('/');
         }catch(err){
             console.log(err);
         }
