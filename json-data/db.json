@@ -1,0 +1,18 @@
+{
+  "employees": [
+    {
+      "id": 3,
+      "name": "Mike Johnson",
+      "position": "UX Designer",
+      "department": "Design",
+      "location": "Los Angeles"
+    },
+    {
+      "name": "aniket",
+      "position": "react",
+      "department": "IT",
+      "location": "pune",
+      "id": 4
+    }
+  ]
+}
